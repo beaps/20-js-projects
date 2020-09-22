@@ -8,4 +8,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(250, 48%, 21%);
+}
+
+.button-container {
+  border: 2px solid hsl(251, 48%, 11%);
+  padding: 0.6rem;
+  border-radius: 5px;
+  box-shadow: inset 0 20px 4px -19px hsla(0, 0%, 100%, 0.7);
+  width: 7.5rem;
+  height: 4.7rem;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+  color: #fafafa;
+  text-shadow: 0 2px 5px hsl(251, 48%, 11%);
+  background: linear-gradient(to top, hsl(250, 48%, 31%), hsl(250, 48%, 65%));
+  border: 2px solid hsl(251, 48%, 11%);
+  border-radius: 5px;
+  box-shadow: inset 0 20px 4px -19px hsla(0, 0%, 100%, 0.5),
+    0 10px 10px 0 hsla(0, 0%, 0%, 0.3);
+  outline: none;
+  will-change: transform;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(
+    to bottom,
+    hsl(250, 48%, 31%),
+    hsl(250, 48%, 65%)
+  );
+}
+
+button:active {
+  transform: translateY(0.2rem);
+  box-shadow: 0 5px 5px 0 hsla(0, 0%, 0%, 0.3);
 }
