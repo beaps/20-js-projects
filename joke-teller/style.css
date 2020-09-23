@@ -22,11 +22,12 @@ body {
 }
 
 button {
+  color: #333;
   cursor: pointer;
   width: 12.5rem;
   height: 3rem;
   font-family: 'Courier New', Courier, monospace;
-  background-color: hsl(45, 100%, 51%);
+  background-color: hsl(49, 98%, 60%);
   border: none;
   border-radius: 3px;
   text-transform: capitalize;
@@ -36,7 +37,7 @@ button {
 }
 
 button:hover {
-  background-color: hsl(45, 100%, 47%);
+  background-color: hsl(49, 98%, 50%);
 }
 
 button:active {
@@ -44,8 +45,8 @@ button:active {
 }
 
 button:disabled {
-  cursor: default;
-  background-color: hsl(45, 10%, 50%);
+  cursor: not-allowed;
+  background-color: lightgray;
 }
 
 /* Media Queries */
