@@ -12,7 +12,7 @@ async function getJoke() {
     return joke;
   } catch (error) {
     console.log(error);
-    return {};
+    return '';
   }
 }
 
