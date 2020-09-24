@@ -30,7 +30,7 @@ function selectJoke(data) {
 async function tellMe(fn) {
   try {
     VoiceRSS.speech({
-      key: '690c091f9dae442f98f3ca693327375f',
+      key: API_KEY_VOICE,
       src: await fn(),
       hl: 'en-us',
       v: 'Linda',

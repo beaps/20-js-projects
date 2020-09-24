@@ -8,7 +8,7 @@ let totalImages = 0;
 
 // Unsplash API
 let imageCounter = 10;
-const API_KEY = '2oj1cwUysfyZTbz25sqajLztBXvnFx0aei55Yqn_e-g';
+const API_KEY = API_KEY_UNSPLASH;
 const API_URL = `https://api.unsplash.com/photos/random/?client_id=${API_KEY}&count=${imageCounter}`;
 
 async function getPhotos() {
