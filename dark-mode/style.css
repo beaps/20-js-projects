@@ -203,4 +203,17 @@ button:hover:not(.button--outline) {
 /* Contact section */
 #contact {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fab {
+  font-size: 5rem;
+  margin-right: 3rem;
+  color: var(--primary-color);
+}
+
+.fab:hover {
+  color: var(--on-background);
 }
