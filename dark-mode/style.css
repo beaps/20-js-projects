@@ -325,6 +325,15 @@ button:hover:not(.button--outline) {
 }
 
 @media screen and (max-width: 559px) {
+  .theme {
+    flex-direction: column;
+  }
+
+  .toggle-switch-container {
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+
   nav {
     font-size: 0.7rem;
   }
@@ -348,15 +357,6 @@ button:hover:not(.button--outline) {
 }
 
 @media screen and (max-width: 424px) {
-  .theme {
-    flex-direction: column;
-  }
-
-  .toggle-switch-container {
-    margin-left: 0;
-    margin-top: 0.3rem;
-  }
-
   .title-group h1 {
     font-size: 2.3rem;
   }
