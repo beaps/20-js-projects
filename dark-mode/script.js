@@ -41,14 +41,31 @@ const lightMode = {
   imagesList: imagesMode('light')
 };
 
-function switchTheme() {
+function setTypeOfTheme() {
   if (input.checked) {
     document.body.setAttribute('data-theme', 'dark');
-    addTheme(darkMode);
+    localStorage.setItem('theme', 'dark');
   } else {
     document.body.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+function checkTheme() {
+  if (localStorage.getItem('theme') === 'dark') {
+    input.checked = true;
+    addTheme(darkMode);
+  } else {
     addTheme(lightMode);
   }
 }
 
+function switchTheme() {
+  setTypeOfTheme();
+  checkTheme();
+}
+
 input.addEventListener('click', switchTheme);
+
+checkTheme();
+switchTheme();
