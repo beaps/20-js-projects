@@ -312,6 +312,10 @@ footer p {
   width: 1.4rem;
 }
 
+.footer__logo {
+  margin-bottom: 3rem;
+}
+
 .address__container,
 .phone__container,
 .email__container {
@@ -330,10 +334,6 @@ footer p {
   align-items: center;
 }
 
-.address__container {
-  margin-top: 3rem;
-}
-
 .phone__container,
 .email__container {
   font-size: 1.2rem;
@@ -346,4 +346,141 @@ footer p {
 
 .social-networks-container i:last-child {
   margin-right: 0;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 1024px) {
+  /* Header */
+
+  .logo-container img {
+    width: 100px;
+  }
+
+  .menu {
+    font-size: 1.6rem;
+  }
+
+  .header-image-container,
+  .header-content__info {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  header {
+    background: var(--darkBlueIntroAndEmail);
+  }
+
+  .bg-image {
+    background-position: top 112% center;
+  }
+
+  /* Features */
+
+  .features {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .feature {
+    width: 45%;
+    margin-right: 10%;
+  }
+
+  .feature:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .features img {
+    height: 80px;
+  }
+
+  /* How it works */
+
+  .how-it-works {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .how-it-works__content {
+    margin-left: 5%;
+  }
+
+  /* Testimonials */
+
+  .testimonials {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .testimonials__group {
+    display: flex;
+    margin-top: -0.9rem;
+  }
+
+  .testimonial {
+    margin-right: 3%;
+    font-size: 1.1rem;
+  }
+
+  .testimonial:last-child {
+    margin-right: 0;
+  }
+
+  /* Form */
+
+  .form-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .form-container input {
+    max-width: 60%;
+    margin-right: 3%;
+  }
+
+  .form-container button {
+    max-width: 30%;
+  }
+
+  /* Footer */
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__logo-container {
+    margin-left: 5%;
+  }
+
+  .footer__section-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section_1 {
+    width: 35%;
+  }
+
+  .section_3,
+  .section_4 {
+    margin: 0;
+  }
+
+  .section_5 {
+    align-items: flex-start;
+  }
+
+  .section_1,
+  .section_2,
+  .section_3,
+  .section_4 {
+    margin-right: 5%;
+  }
 }
