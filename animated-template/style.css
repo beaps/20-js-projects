@@ -185,6 +185,7 @@ header {
   width: 20px;
   margin: 0;
   margin-left: 0.5rem;
+  transform: rotateY(0);
 }
 
 /* Testimonials section */
