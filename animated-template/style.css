@@ -139,6 +139,7 @@ header {
 .feature {
   text-align: center;
   margin-top: 7rem;
+  opacity: 0;
 }
 
 .feature h2 {
@@ -151,7 +152,13 @@ header {
 .how-it-works img {
   width: 100%;
   margin: 3rem 0;
+  transform: rotateY(90deg);
 }
+
+.how-it-works__content {
+  transform: scale(0);
+}
+
 .how-it-works h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 1.8rem;
@@ -201,6 +208,7 @@ header {
   border-radius: 5px;
   font-size: 1rem;
   margin-bottom: 2rem;
+  opacity: 0;
 }
 
 .testimonial__text {
@@ -256,6 +264,7 @@ header {
   border-radius: 10px;
   background: var(--darkBlueMainBackground);
   text-align: center;
+  transform: scale(0);
 }
 
 .form-container h2 {
@@ -346,6 +355,16 @@ footer p {
 
 .social-networks-container i:last-child {
   margin-right: 0;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.attribution a {
+  color: var(--cyanCtaGradient);
+  text-decoration: none;
 }
 
 /* Media queries */
@@ -482,5 +501,76 @@ footer p {
   .section_3,
   .section_4 {
     margin-right: 5%;
+  }
+}
+
+/* Animations */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeUp 700ms 200ms forwards ease-out;
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-3rem);
+  animation: fadeDown 700ms 200ms forwards ease-out;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(-3rem);
+  animation: fadeRight 700ms 200ms forwards ease-out;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animRotateY {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0);
   }
 }

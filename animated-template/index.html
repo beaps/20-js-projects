@@ -31,23 +31,29 @@
       <div class="header-content">
         <div class="bg-image">
           <div class="header-image-container">
-            <img src="./images/illustration-intro.png" alt="" />
+            <img
+              class="fade-down"
+              src="./images/illustration-intro.png"
+              alt=""
+            />
           </div>
           <div class="header-content__info">
-            <h1>All your files in one secure location, accessible anywhere.</h1>
-            <p>
+            <h1 class="fade-up">
+              All your files in one secure location, accessible anywhere.
+            </h1>
+            <p class="fade-right">
               Fylo stores all your most important files in one secure location.
               Access them wherever you need, share and collaborate with friends
               family, and co-workers.
             </p>
-            <button>Get Started</button>
+            <button class="fade-up">Get Started</button>
           </div>
         </div>
       </div>
     </header>
     <!-- Features -->
     <section class="features wrapper">
-      <div class="feature">
+      <div class="feature" data-delay="0s">
         <img src="./images/icon-access-anywhere.svg" alt="" />
         <h2>Access your files, anywhere</h2>
         <p>
@@ -55,7 +61,7 @@
           account means your files follow you everywhere.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature" data-delay="350ms">
         <img src="./images/icon-security.svg" alt="" />
         <h2>Security you can trust</h2>
         <p>
@@ -63,7 +69,7 @@
           couple of the security features we allow to help secure your files.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature" data-delay="700ms">
         <img src="./images/icon-collaboration.svg" alt="" />
         <h2>Real-time collaboration</h2>
         <p>
@@ -71,7 +77,7 @@
           for live collaboration. No email attachments required.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature" data-delay="1050ms">
         <img src="./images/icon-any-file.svg" alt="" />
         <h2>Store any type of file</h2>
         <p>
@@ -83,7 +89,12 @@
     <!-- how it works -->
     <section class="how-it-works wrapper">
       <div class="how-it-works__image-container">
-        <img src="./images/illustration-stay-productive.png" alt="" />
+        <img
+          id="how-it-works__image"
+          src="./images/illustration-stay-productive.png"
+          alt=""
+          data-delay="0.3s"
+        />
       </div>
       <div class="how-it-works__content">
         <h2>Stay productive, wherever you are</h2>
@@ -111,7 +122,7 @@
       />
       <div class="testimonials__group">
         <!-- Testimonial -->
-        <div class="testimonial">
+        <div class="testimonial" data-delay="0s">
           <p class="testimonial__text">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
@@ -128,7 +139,7 @@
           </div>
         </div>
         <!-- Testimonial -->
-        <div class="testimonial">
+        <div class="testimonial" data-delay="0.5s">
           <p class="testimonial__text">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
@@ -145,7 +156,7 @@
           </div>
         </div>
         <!-- Testimonial -->
-        <div class="testimonial">
+        <div class="testimonial" data-delay="1s">
           <p class="testimonial__text">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
@@ -240,14 +251,13 @@
           </div>
         </div>
       </div>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/beaps">beaps</a>.
+      </p>
     </footer>
-
-    <!-- <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer> -->
 
     <!-- Script -->
     <script src="script.js"></script>
