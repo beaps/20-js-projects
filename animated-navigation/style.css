@@ -38,6 +38,17 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-100vw);
+}
+
+.overlay-slide-right-in {
+  transition: transform 400ms ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left-out {
+  transition: transform 800ms ease-in-out;
+  transform: translateX(-100vw);
 }
 
 /* Nav menu items */
@@ -62,6 +73,7 @@ nav ul li {
   justify-content: center;
   align-items: center;
   position: relative;
+  /* pointer-events: none; */
 }
 
 nav li a {
@@ -72,6 +84,9 @@ nav li a {
   letter-spacing: 0.2rem;
   font-size: 1.2rem;
   transition: color 200ms;
+  outline: none;
+  width: 100%;
+  text-align: center;
 }
 
 nav li a::before {
@@ -116,6 +131,68 @@ nav li a:focus {
   background-color: var(--navColor5);
 }
 
+/* Slide in animation */
+
+.slide-in-1 {
+  animation: slideIn 400ms linear 200ms both;
+}
+
+.slide-in-2 {
+  animation: slideIn 400ms linear 400ms both;
+}
+
+.slide-in-3 {
+  animation: slideIn 400ms linear 600ms both;
+}
+
+.slide-in-4 {
+  animation: slideIn 400ms linear 800ms both;
+}
+
+.slide-in-5 {
+  animation: slideIn 400ms linear 1000ms both;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Slide out animation */
+
+.slide-out-1 {
+  animation: slideOut 300ms linear 500ms both;
+}
+
+.slide-out-2 {
+  animation: slideOut 300ms linear 400ms both;
+}
+
+.slide-out-3 {
+  animation: slideOut 300ms linear 300ms both;
+}
+
+.slide-out-4 {
+  animation: slideOut 300ms linear 200ms both;
+}
+
+.slide-out-5 {
+  animation: slideOut 300ms linear 100ms both;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
 /* -----  Menu Bars -----  */
 
 .menu-bars {
@@ -127,9 +204,9 @@ nav li a:focus {
   cursor: pointer;
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.bar-1,
+.bar-2,
+.bar-3 {
   width: 35px;
   height: 2px;
   background-color: #fafafa;
@@ -138,17 +215,17 @@ nav li a:focus {
 }
 
 /* Rotate first bar */
-.change .bar1 {
+.change .bar-1 {
   transform: rotate(-45deg) translate(-7px, 8px);
 }
 
 /* Fade out the second bar */
-.change .bar2 {
+.change .bar-2 {
   opacity: 0;
 }
 
 /* Rotate last bar */
-.change .bar3 {
+.change .bar-3 {
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
