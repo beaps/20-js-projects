@@ -1,32 +1,28 @@
 const menuBars = document.querySelector('#menu-bars');
 const overlay = document.querySelector('#overlay');
 const nav = document.querySelector('nav');
-const navItems = Array.from(document.querySelectorAll('nav li'));
-console.log(navItems);
+const navItems = document.querySelectorAll('nav li');
 
-function toggleNav(e) {
+function moveNav(from, to) {
+  overlay.classList.replace(`overlay-slide-${from}`, `overlay-slide-${to}`);
+  navItems.forEach((item, index) => {
+    item.classList.replace(
+      `slide-${from}-${index + 1}`,
+      `slide-${to}-${index + 1}`
+    );
+  });
+}
+
+function toggleNav() {
   menuBars.classList.toggle('change');
   overlay.classList.toggle('overlay-active');
 
-  if (overlay.classList.contains('overlay-active')) {
-    overlay.classList.add('overlay-slide-right-in');
-    overlay.classList.remove('overlay-slide-left-out');
-
-    navItems.forEach((item, index) => {
-      item.classList.replace(`slide-out-${index + 1}`, `slide-in-${index + 1}`);
-    });
-  } else {
-    overlay.classList.add('overlay-slide-left-out');
-    overlay.classList.remove('overlay-slide-right-in');
-    navItems.forEach((item, index) => {
-      item.classList.replace(`slide-in-${index + 1}`, `slide-out-${index + 1}`);
-    });
-  }
+  overlay.classList.contains('overlay-active')
+    ? moveNav('out', 'in')
+    : moveNav('in', 'out');
 }
 
-// Event listeners
 menuBars.addEventListener('click', toggleNav);
-
 nav.addEventListener('click', (event) => {
   // There are 2 possible elements when you click <nav>:
   if (event.target.nodeName === 'LI' || event.target.nodeName === 'A') {

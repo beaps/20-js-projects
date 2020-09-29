@@ -3,11 +3,7 @@
 :root {
   --primaryColor: #fafafa;
   --navColor1: #be9fe1;
-  /* --navColor1: #be8abf; */
-  /* --navColor1: #be79df; */
   --navColor2: #8566aa;
-  /* --navColor1: #8566aa; */
-  /* --navColor2: #726a95; */
   --navColor3: #8ec6c5;
   --navColor4: #6983aa;
   --navColor5: #27496d;
@@ -41,12 +37,12 @@ body {
   transform: translateX(-100vw);
 }
 
-.overlay-slide-right-in {
+.overlay-slide-in {
   transition: transform 400ms ease-in-out;
   transform: translateX(0);
 }
 
-.overlay-slide-left-out {
+.overlay-slide-out {
   transition: transform 800ms ease-in-out;
   transform: translateX(-100vw);
 }
@@ -244,6 +240,7 @@ section {
 }
 
 #home {
+  /* Image: Kamil Kalbarczyk -> https://unsplash.com/photos/HMFg9UlURvc */
   background-image: url('https://images.unsplash.com/photo-1529420705456-5c7e04dd043d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80');
   background-size: cover;
   background-position: center center;
