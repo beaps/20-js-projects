@@ -2,11 +2,19 @@
 
 :root {
   --primaryColor: #fafafa;
-  --navColor1: #8566aa;
-  --navColor2: #726a95;
+  --navColor1: #be9fe1;
+  /* --navColor1: #be8abf; */
+  /* --navColor1: #be79df; */
+  --navColor2: #8566aa;
+  /* --navColor1: #8566aa; */
+  /* --navColor2: #726a95; */
   --navColor3: #8ec6c5;
   --navColor4: #6983aa;
   --navColor5: #27496d;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -19,9 +27,96 @@ body {
   font-family: 'Advent Pro', sans-serif;
 }
 
-/* Navigation Menu */
+/* ----- Navigation Menu ----- */
 
-/* Menu Bars */
+/* Overlay */
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Nav menu items */
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav li a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  transition: color 200ms;
+}
+
+nav li a::before {
+  content: '';
+  width: 25vw;
+  height: 3px;
+  background-color: var(--primaryColor);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+nav li a:hover::before,
+nav li a:focus::before {
+  opacity: 1;
+}
+
+nav li a:hover,
+nav li a:focus {
+  color: #ffc93c;
+}
+
+#nav-1 {
+  background-color: var(--navColor1);
+}
+
+#nav-2 {
+  background-color: var(--navColor2);
+}
+
+#nav-3 {
+  background-color: var(--navColor3);
+}
+
+#nav-4 {
+  background-color: var(--navColor4);
+}
+
+#nav-5 {
+  background-color: var(--navColor5);
+}
+
+/* -----  Menu Bars -----  */
 
 .menu-bars {
   position: fixed;
@@ -57,7 +152,7 @@ body {
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
-/* Sections */
+/* -----  Sections -----  */
 
 section {
   width: 100%;
