@@ -23,11 +23,6 @@ function toggleNav() {
 }
 
 menuBars.addEventListener('click', toggleNav);
-nav.addEventListener('click', (event) => {
-  // There are 2 possible elements when you click <nav>:
-  if (event.target.nodeName === 'LI' || event.target.nodeName === 'A') {
-    toggleNav();
-  }
-});
+nav.addEventListener('click', toggleNav);
 
 toggleNav();
